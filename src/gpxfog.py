@@ -1,5 +1,32 @@
-import gpxpy, os
+import gpxpy, os, mplleaflet
 import matplotlib.pyplot as plt
+
+def parseGPX(dir):
+    # reading GPX files.
+    fileList = os.listdir(dir)
+    gpxData = []
+
+    for f in fileList:
+        gpx = open(dir + '/' + f, 'r')
+        gpxData.append(gpxpy.parse(gpx))
+
+    print(dir + ' Parsed')
+    lat = []
+    lon = []
+
+    # plot data
+    for gpx in gpxData:
+
+        for track in gpx.tracks:
+            for segment in track.segments:
+                for point in segment.points:
+                    lat.append(point.latitude)
+                    lon.append(point.longitude)
+
+    return lat, lon
+
+def drawGPX(lat, lon, colour):
+    plt.plot(lon, lat, color=colour, lw=1, alpha=1)
 
 
 def plotGPX(dir, colour):
@@ -23,7 +50,7 @@ def plotGPX(dir, colour):
                     lat.append(point.latitude)
                     lon.append(point.longitude)
 
-        plt.plot(lon, lat, color=colour, lw=0.2, alpha=0.8)
+        plt.plot(lon, lat, color=colour, lw=3, alpha=0.8)
     print(dir + ' plotted')
 
 # init plot
@@ -34,10 +61,12 @@ ax.set_axis_off()
 fig.add_axes(ax)
 
 # show plot
-plotGPX('../adamGPX', 'deepskyblue')
-plotGPX('../joeGPX', 'ivory')
+plotGPX('../adamGPX', 'blue')
+plotGPX('../joeGPX', 'red')
 plotGPX('../gabGPX', 'mediumvioletred')
 plotGPX('../scoGPX', 'orange')
+
+mplleaflet.show(fig,)
 
 plt.show()
 
