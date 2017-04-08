@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>ROAM</title>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Styles -->
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", sans-serif;
+    }
+
+    .w3-navbar, h1, button {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .fa-anchor, .fa-coffee, .fa-newspaper-o {
+        font-size: 200px;
+    }
+
+    mapDiv {
+        padding: 10px;
+    }
+
+
+</style>
+<script>
+    function toggleElement(nav) {
+        var x = document.getElementById(nav);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+<body>
+
+    <!-- Navbar -->
+    <ul class="w3-navbar w3-deep-orange w3-card-2 w3-top w3-left-align w3-large">
+        <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+            <a class="w3-padding-large w3-hover-white w3-large w3-deep-orange"
+               href="javascript:void(0);" 
+               onclick="toggleElement('smallNav')" 
+               title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        </li>
+        <li><a href="home.html" class="w3-padding-large w3-white"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li class="w3-hide-small"><a href="example.html" class="w3-padding-large w3-hover-white">Example</a></li>
+        <li class="w3-hide-small"><a href="upload.html" class="w3-padding-large w3-deep-orange w3-hover-white">Upload</a></li>
+
+    </ul>
+
+    <!-- Navbar on small screens -->
+    <div id="smallNav" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:51px">
+        <ul class="w3-navbar w3-left-align w3-large w3-black">
+            <li><a class="w3-padding-large" href="example.html">Example</a></li>
+            <li><a class="w3-padding-large" href="upload.html">Upload</a></li>
+
+        </ul>
+    </div>
+
+    <!-- Header on large screens-->
+    <div class="w3-container w3-deep-orange w3-center w3-padding-32 w3-hide-small">
+         <i id="icon" class="fa fa-chevron-right" style="text-shadow: rgb(179, 61, 24) 0px 0px 0px, rgb(181, 62, 24) 1px 1px 0px, rgb(183, 62, 24) 2px 2px 0px, rgb(185, 63, 25) 3px 3px 0px, rgb(187, 64, 25) 4px 4px 0px, rgb(189, 65, 25) 5px 5px 0px, rgb(192, 65, 26) 6px 6px 0px, rgb(194, 66, 26) 7px 7px 0px, rgb(196, 67, 26) 8px 8px 0px, rgb(198, 68, 26) 9px 9px 0px, rgb(200, 68, 27) 10px 10px 0px, rgb(203, 69, 27) 11px 11px 0px, rgb(205, 70, 27) 12px 12px 0px, rgb(207, 71, 28) 13px 13px 0px, rgb(209, 71, 28) 14px 14px 0px, rgb(211, 72, 28) 15px 15px 0px, rgb(213, 73, 28) 16px 16px 0px, rgb(216, 74, 29) 17px 17px 0px, rgb(218, 74, 29) 18px 18px 0px, rgb(220, 75, 29) 19px 19px 0px, rgb(222, 76, 30) 20px 20px 0px, rgb(224, 77, 30) 21px 21px 0px, rgb(227, 77, 30) 22px 22px 0px, rgb(229, 78, 31) 23px 23px 0px, rgb(231, 79, 31) 24px 24px 0px, rgb(233, 80, 31) 25px 25px 0px, rgb(235, 80, 31) 26px 26px 0px, rgb(238, 81, 32) 27px 27px 0px, rgb(240, 82, 32) 28px 28px 0px, rgb(242, 83, 32) 29px 29px 0px, rgb(244, 83, 33) 30px 30px 0px, rgb(246, 84, 33) 31px 31px 0px, rgb(248, 85, 33) 32px 32px 0px, rgb(251, 86, 33) 33px 33px 0px, rgb(253, 86, 34) 34px 34px 0px; font-size: 80px; color: rgb(255, 255, 255); height: 150px; width: 150px; line-height: 150px; border-radius: ; text-align: center; background-color: rgb(255, 87, 34);"></i> 
+        <h1>ROAM</h1>
+        <h2>Running On A Map</h2>
+	</div>
+	
+	<!-- Header on small screens-->
+    <div class="w3-container w3-deep-orange w3-center w3-padding-64 w3-hide-large w3-hide-medium">
+         <i id="icon" class="fa fa-chevron-right" style="text-shadow: rgb(179, 61, 24) 0px 0px 0px, rgb(181, 62, 24) 1px 1px 0px, rgb(183, 62, 24) 2px 2px 0px, rgb(185, 63, 25) 3px 3px 0px, rgb(187, 64, 25) 4px 4px 0px, rgb(189, 65, 25) 5px 5px 0px, rgb(192, 65, 26) 6px 6px 0px, rgb(194, 66, 26) 7px 7px 0px, rgb(196, 67, 26) 8px 8px 0px, rgb(198, 68, 26) 9px 9px 0px, rgb(200, 68, 27) 10px 10px 0px, rgb(203, 69, 27) 11px 11px 0px, rgb(205, 70, 27) 12px 12px 0px, rgb(207, 71, 28) 13px 13px 0px, rgb(209, 71, 28) 14px 14px 0px, rgb(211, 72, 28) 15px 15px 0px, rgb(213, 73, 28) 16px 16px 0px, rgb(216, 74, 29) 17px 17px 0px, rgb(218, 74, 29) 18px 18px 0px, rgb(220, 75, 29) 19px 19px 0px, rgb(222, 76, 30) 20px 20px 0px, rgb(224, 77, 30) 21px 21px 0px, rgb(227, 77, 30) 22px 22px 0px, rgb(229, 78, 31) 23px 23px 0px, rgb(231, 79, 31) 24px 24px 0px, rgb(233, 80, 31) 25px 25px 0px, rgb(235, 80, 31) 26px 26px 0px, rgb(238, 81, 32) 27px 27px 0px, rgb(240, 82, 32) 28px 28px 0px, rgb(242, 83, 32) 29px 29px 0px, rgb(244, 83, 33) 30px 30px 0px, rgb(246, 84, 33) 31px 31px 0px, rgb(248, 85, 33) 32px 32px 0px, rgb(251, 86, 33) 33px 33px 0px, rgb(253, 86, 34) 34px 34px 0px; font-size: 80px; color: rgb(255, 255, 255); height: 150px; width: 150px; line-height: 150px; border-radius: ; text-align: center; background-color: rgb(255, 87, 34);"></i> 
+        <h1>ROAM</h1>
+        <h2>Running On A Map</h2>
+	</div>
+	
+		
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            
+        </div>
+    </div>
+
+</body>
+</html>
