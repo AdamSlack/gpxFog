@@ -37,8 +37,7 @@ fig.add_axes(ax)
 plotGPX('../joeGPX', 'red')
 plotGPX('../gabGPX', 'mediumvioletred')
 plotGPX('../scoGPX', 'orange')
-plotGPX('../adamGPX', 'lawngreen')
-
+plotGPX('../adamGPX', 'darkgreen')
 
 mplleaflet.save_html(fig, '../maps/'+str(int(time.time())) + '.html')
 

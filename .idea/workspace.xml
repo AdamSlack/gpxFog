@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c11dae48-22c6-43b6-9df4-94d241a1013e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/home.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/_map.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170108-141816-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170108-141816-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170109-173746-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170109-173746-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170110-172611-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170110-172611-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170112-170312-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170112-170312-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170114-190521-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170114-190521-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170116-164009-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170116-164009-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170118-172654-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170118-172654-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170119-180815-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170119-180815-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170121-085646-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170121-085646-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170122-132756-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170122-132756-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170124-171439-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170124-171439-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170125-171205-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170125-171205-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170129-192359-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170129-192359-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170213-180426-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170213-180426-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170213-184704-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170213-184704-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170219-095952-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170219-095952-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170222-074838-Ride.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170222-074838-Ride.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170222-162228-Ride.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170222-162228-Ride.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170223-074324-Ride.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170223-074324-Ride.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170223-180922-Ride.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170223-180922-Ride.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170225-090333-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170225-090333-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170225-140031-Ride.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170225-140031-Ride.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170226-143253-Ride.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170226-143253-Ride.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170311-190359-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170311-190359-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170318-090540-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170318-090540-Run.gpx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adamGPX/20170322-180559-Run.gpx" afterPath="$PROJECT_DIR$/adamGPX/20170322-180559-Run.gpx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gpxfog.py" afterPath="$PROJECT_DIR$/src/gpxfog.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/home.html" afterPath="$PROJECT_DIR$/src/home.html" />
     </list>
     <ignored path="gpxFog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,8 +26,8 @@
       <file leaf-file-name="gpxfog.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gpxfog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+            <state relative-caret-position="402">
+              <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -84,10 +56,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -356,15 +327,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09905163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2008547" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3217768" sideWeight="0.50632244" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3249453" sideWeight="0.508547" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3217768" sideWeight="0.49367756" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3249453" sideWeight="0.491453" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -506,8 +477,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gpxfog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        <state relative-caret-position="402">
+          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
