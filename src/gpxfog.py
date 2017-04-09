@@ -21,7 +21,7 @@ def plotGPX(dir, colour):
             for segment in track.segments:
 
                 for i in range(0, len(segment.points), 10):
-                    lat.append(segment.points[i].latitude)
+                    lat.append(segment.points[i].latitude)a
                     lon.append(segment.points[i].longitude)
 
         plt.plot(lon, lat, color=colour, lw=3, alpha=0.5)

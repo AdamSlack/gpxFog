@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gpx creator="StravaGPX" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<gpx creator="strava.com Android" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
  <metadata>
   <time>2017-02-25T09:03:33Z</time>
  </metadata>
  <trk>
-  <name>Morning Run</name>
+  <name>Morning Run - Crane park - park run</name>
   <trkseg>
    <trkpt lat="51.4413410" lon="-0.3714600">
-    <ele>17.3</ele>
+    <ele>17.2</ele>
     <time>2017-02-25T09:03:33Z</time>
    </trkpt>
    <trkpt lat="51.4413470" lon="-0.3715360">
@@ -4857,6 +4857,10 @@
    <trkpt lat="51.4441440" lon="-0.3738060">
     <ele>20.0</ele>
     <time>2017-02-25T09:28:33Z</time>
+   </trkpt>
+   <trkpt lat="51.4441730" lon="-0.3738040">
+    <ele>20.0</ele>
+    <time>2017-02-25T09:28:34Z</time>
    </trkpt>
   </trkseg>
  </trk>

@@ -95,9 +95,15 @@
 		
     <!-- First Grid -->
     <div class="w3-row-padding w3-padding-32 w3-container">
-        <div class="w3-content">
-          <input type="file" id="myFile" multiple size="50" onchange="addToMap()">
-            <div id='map'></div>
+        <div class="w3-container">
+            <div class="w3-quarter w3-content">
+                <p class="w3-medium">1. Select Colour for Route.<p>
+                <input class="" id="colourPicker" type="color" name="favcolor" value="#f00000"> <a id="colourText">Default Colour Selected</a>
+
+                <p class="w3-medium">2. Select .GPX files to upload.<p>
+                <input class="" type="file" id="myFile" multiple size="50" onchange="addToMap()">
+            </div>
+            <div class="w3-content w3-rest" id='map'></div>
         </div>
     </div>
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
@@ -106,29 +112,33 @@
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiYWRhbXNsYWNrIiwiYSI6ImNqMHIyeHJvazAwMHcyd3MwaWtjZjFld3AifQ.b92-BLtU_U6r9wnEdi_u8Q';
-var map = L.mapbox.map('map', 'mapbox.dark')
-    .setView([51.5462980, -0.4642750], 4);
-map.setStyle('mapbox.dark');
-// Omnivore will AJAX-request this file behind the scenes and parse it:
-// note that there are considerations:
-// - The CSV file must contain latitude and longitude values, in column
-//   named roughly latitude and longitude
-// - The file must either be on the same domain as the page that requests it,
-//   or both the server it is requested from and the user's browser must
-//   support CORS.
-// omnivore.gpx('gpx/testrun.gpx').addTo(map);
-// omnivore.gpx('gpx/testrun2.gpx').addTo(map);
+var map = L.mapbox.map('map', 'mapbox.dark').setView([51.5462980, -0.4642750], 4);
+
+
+$("#colourPicker").bind("change", function(e) {
+    var c = $('#colourPicker').val();
+    $('#colourText').text('Selected Colour: '.concat(c));
+});
+
 
 function setupReader(file) {
     var name = file.name;
     var reader = new FileReader();  
     reader.onload = function() {  
         var parsed = new DOMParser().parseFromString(this.result, "text/xml");
-      omnivore.gpx.parse(parsed).addTo(map);
+
+        var l = omnivore.gpx.parse(parsed)
+        l.setStyle({color : getSelectedColour(),
+                    opacity: 0.5});
+        l.addTo(map);
     }
     reader.readAsText(file);
 }
 
+
+function getSelectedColour() {
+    return $('#colourPicker').val();
+}
 
 
 function addToMap(){
