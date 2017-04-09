@@ -2,12 +2,18 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>Loading markers from CSV</title>
+<title>GPX Map</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+
 <style>
-  #map { width: 100%; height: 600px; }
+    #map { width: 100%; height: 600px; }
+    .leaflet-container { background: #222; }
+    body, h1, h2, h3, h4, h5, h6 { font-family: "Lato", sans-serif; }
+    .w3-navbar, h1, button { font-family: "Montserrat", sans-serif; }
+    .fa-anchor, .fa-coffee, .fa-newspaper-o { font-size: 200px; }
+    mapDiv { padding: 10px; }
 </style>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,42 +23,14 @@
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+<script src="scripts.js"></script>
 
-<!-- Styles -->
-<style>
-    body, h1, h2, h3, h4, h5, h6 {
-        font-family: "Lato", sans-serif;
-    }
-
-    .w3-navbar, h1, button {
-        font-family: "Montserrat", sans-serif;
-    }
-
-    .fa-anchor, .fa-coffee, .fa-newspaper-o {
-        font-size: 200px;
-    }
-
-    mapDiv {
-        padding: 10px;
-    }
-
-
-</style>
-<script>
-    function toggleElement(nav) {
-        var x = document.getElementById(nav);
-        if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-        } else {
-            x.className = x.className.replace(" w3-show", "");
-        }
-    }
-</script>
 </head>
 <body>
-<body>
 
-    <!-- Navbar -->
+
+<!-- Navbar -->
     <ul class="w3-navbar w3-deep-orange w3-card-2 w3-top w3-left-align w3-large">
         <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
             <a class="w3-padding-large w3-hover-white w3-large w3-deep-orange"
@@ -64,8 +42,6 @@
         <li class="w3-hide-small"><a href="example.html" class="w3-padding-large w3-deep-orange w3-hover-white">Example</a></li>
         <li class="w3-hide-small"><a href="upload.html" class="w3-padding-large w3-white ">Upload</a></li>
 		<li class="w3-hide-small"><a href="uploadNoMap.html" class="w3-padding-large w3-deep-orange w3-hover-white">Blank Map</a></li>
-
-
     </ul>
 
     <!-- Navbar on small screens -->
@@ -106,49 +82,15 @@
             <div class="w3-content w3-rest" id='map'></div>
         </div>
     </div>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
-
  
-
 <script>
-L.mapbox.accessToken = 'pk.eyJ1IjoiYWRhbXNsYWNrIiwiYSI6ImNqMHIyeHJvazAwMHcyd3MwaWtjZjFld3AifQ.b92-BLtU_U6r9wnEdi_u8Q';
-var map = L.mapbox.map('map', 'mapbox.dark').setView([51.5462980, -0.4642750], 4);
+    L.mapbox.accessToken = 'pk.eyJ1IjoiYWRhbXNsYWNrIiwiYSI6ImNqMHIyeHJvazAwMHcyd3MwaWtjZjFld3AifQ.b92-BLtU_U6r9wnEdi_u8Q';
+    var map = L.mapbox.map('map', 'mapbox.dark').setView([51.5462980, -0.4642750], 4);
 
-
-$("#colourPicker").bind("change", function(e) {
-    var c = $('#colourPicker').val();
-    $('#colourText').text('Selected Colour: '.concat(c));
-});
-
-
-function setupReader(file) {
-    var name = file.name;
-    var reader = new FileReader();  
-    reader.onload = function() {  
-        var parsed = new DOMParser().parseFromString(this.result, "text/xml");
-
-        var l = omnivore.gpx.parse(parsed)
-        l.setStyle({color : getSelectedColour(),
-                    opacity: 0.5});
-        l.addTo(map);
-    }
-    reader.readAsText(file);
-}
-
-
-function getSelectedColour() {
-    return $('#colourPicker').val();
-}
-
-
-function addToMap(){
-  var files = document.getElementById('myFile').files;
-
-  for (var i = 0; i < files.length; i++) {
-    setupReader(files[i]);
-}
-}
-
+    $("#colourPicker").bind("change", function(e) {
+        var c = $('#colourPicker').val();
+        $('#colourText').text('Selected Colour: '.concat(c));
+    });
 </script>
 
 </body>

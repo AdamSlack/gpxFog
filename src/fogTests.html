@@ -2,18 +2,12 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>Blank Map</title>
+<title>Loading markers from CSV</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
-
 <style>
-    #map { width: 100%; height: 600px; }
-    .leaflet-container { background: #222; }
-    body, h1, h2, h3, h4, h5, h6 { font-family: "Lato", sans-serif; }
-    .w3-navbar, h1, button { font-family: "Montserrat", sans-serif; }
-    .fa-anchor, .fa-coffee, .fa-newspaper-o { font-size: 200px; }
-    mapDiv { padding: 10px; }
+  #map { width: 100%; height: 600px; }
 </style>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,9 +17,51 @@
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
-<script src="scripts.js"></script>
 
+<!-- Styles -->
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", sans-serif;
+    }
+
+    .w3-navbar, h1, button {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .fa-anchor, .fa-coffee, .fa-newspaper-o {
+        font-size: 200px;
+    }
+
+    mapDiv {
+        padding: 10px;
+    }
+	
+	.eraser {
+		left:-30%;
+		top: 8px;
+		height: 100%;
+		width: 130%;
+		border-radius: 135px/65px;
+		box-shadow: 0 0 100px 50px rgba(255, 255, 255, .8);
+		display: block;
+		position: absolute;
+		z-index: 2;
+		background: radial-gradient(#fff, rgba(255, 255, 255, .95));
+		animation: erase 4s ease-out;
+	}
+
+
+</style>
+<script>
+    function toggleElement(nav) {
+        var x = document.getElementById(nav);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
 </head>
 <body>
 <body>
@@ -40,8 +76,9 @@
         </li>
         <li><a href="home.html" class="w3-padding-large w3-hover-white w3-deep-orange"><i class="fa fa-home" aria-hidden="true"></i></a></li>
         <li class="w3-hide-small"><a href="example.html" class="w3-padding-large w3-deep-orange w3-hover-white">Example</a></li>
-        <li class="w3-hide-small"><a href="upload.html" class="w3-padding-large w3-deep-orange w3-hover-white">Upload</a></li>
-		<li class="w3-hide-small"><a href="uploadNoMap.html" class="w3-padding-large w3-white ">Blank Map</a></li>
+        <li class="w3-hide-small"><a href="upload.html" class="w3-padding-large w3-white ">Upload</a></li>
+		<li class="w3-hide-small"><a href="uploadNoMap.html" class="w3-padding-large w3-deep-orange w3-hover-white">Blank Map</a></li>
+
 
     </ul>
 
@@ -49,7 +86,7 @@
     <div id="smallNav" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:51px">
         <ul class="w3-navbar w3-left-align w3-large w3-black">
             <li><a class="w3-padding-large" href="example.html">Example</a></li>
-            <li><a class="w3-padding-large" href="upload.html">Upload</a></li>
+            <li><a class="w3-padding-large" href="upload.html">Example</a></li>
             <li><a class="w3-padding-large" href="uploadNoMap.html">Blank Map</a></li>
 
         </ul>
@@ -69,28 +106,55 @@
         <h2>Upload .GPX files</h2>
 	</div>
 	
+		
     <!-- First Grid -->
     <div class="w3-row-padding w3-padding-32 w3-container">
-        <div class="w3-container">
-            <div class="w3-quarter w3-content">
-                <p class="w3-medium">1. Select Colour for Route.<p>
-                <input class="" id="colourPicker" type="color" name="favcolor" value="#f00000"> <a id="colourText">Default Colour Selected</a>
-
-                <p class="w3-medium">2. Select .GPX files to upload.<p>
-                <input class="" type="file" id="myFile" multiple size="50" onchange="addToMap()">
-            </div>
-            <div class="w3-content w3-rest" id='map'></div>
+        <div class="w3-content">
+          <input type="file" id="myFile" multiple size="50" onchange="addToMap()">
+            <div id='map'></div>
         </div>
     </div>
- 
-<script>
-    L.mapbox.accessToken = 'pk.eyJ1IjoiYWRhbXNsYWNrIiwiYSI6ImNqMHIyeHJvazAwMHcyd3MwaWtjZjFld3AifQ.b92-BLtU_U6r9wnEdi_u8Q';
-    var map = L.mapbox.map('map', 'none').setView([51.5462980, -0.4642750], 4);
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
 
-    $("#colourPicker").bind("change", function(e) {
-        var c = $('#colourPicker').val();
-        $('#colourText').text('Selected Colour: '.concat(c));
-    });
+ 
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiYWRhbXNsYWNrIiwiYSI6ImNqMHIyeHJvazAwMHcyd3MwaWtjZjFld3AifQ.b92-BLtU_U6r9wnEdi_u8Q';
+var map = L.mapbox.map('map', 'mapbox.dark')
+    .setView([51.5462980, -0.4642750], 4);
+b = map.getBounds()
+map.se
+map.setStyle('mapbox.dark');
+// Omnivore will AJAX-request this file behind the scenes and parse it:
+// note that there are considerations:
+// - The CSV file must contain latitude and longitude values, in column
+//   named roughly latitude and longitude
+// - The file must either be on the same domain as the page that requests it,
+//   or both the server it is requested from and the user's browser must
+//   support CORS.
+// omnivore.gpx('gpx/testrun.gpx').addTo(map);
+// omnivore.gpx('gpx/testrun2.gpx').addTo(map);
+
+function setupReader(file) {
+    var name = file.name;
+    var reader = new FileReader();  
+    reader.onload = function() {  
+        var parsed = new DOMParser().parseFromString(this.result, "text/xml");
+      omnivore.gpx.parse(parsed).addTo(map);
+    }
+    reader.readAsText(file);
+}
+
+
+
+function addToMap(){
+  var files = document.getElementById('myFile').files;
+
+  for (var i = 0; i < files.length; i++) {
+    setupReader(files[i]);
+}
+}
+
 </script>
 
 </body>
